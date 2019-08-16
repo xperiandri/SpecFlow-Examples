@@ -1,0 +1,18 @@
+{
+  "$schema": "https://raw.githubusercontent.com/reportportal/agent-net-specflow/master/ReportPortal.SpecFlowPlugin/ReportPortal.config.schema",
+  "enabled": true,
+  "server": {
+    "url": "",
+    "project": "",
+    "authentication": {
+      "uuid": ""
+    }
+  },
+  "launch": {
+    "name": "SpecFlow unfinished feature reproduction launch",
+    "description": "this is description",
+    "debugMode": false,
+    "tags": [ "smoke" ]
+  }
+}
+

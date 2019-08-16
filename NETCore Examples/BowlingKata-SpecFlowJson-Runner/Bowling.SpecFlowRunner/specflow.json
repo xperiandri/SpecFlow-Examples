@@ -1,5 +1,5 @@
-﻿{
-    "language": {
-        "feature": "de-AT"
-    }
+{
+  "trace": {
+    "traceSuccessfulSteps": true
+  }
 }

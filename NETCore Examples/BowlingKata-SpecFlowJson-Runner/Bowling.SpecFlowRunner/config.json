@@ -1,0 +1,19 @@
+{
+  // DTN startup URL
+  "url": "https://uat.dealertrackcanada.com/default1.aspx",
+
+  // Seconds. How long to wait until the element is found on a page.
+  "name": "Automation",
+
+  // Seconds. How long to wait until the element is found on a page.
+  "timeout": 75,
+
+  // Seconds. Implicit wait timeout
+  "implicitWaitTimout": 10,
+
+  // URL to Selenium Hub
+  "seleniumHubUrl": "http://localhost:4445/wd/hub",
+
+  // Browser. Possible values: chrome, ie
+  "browser": "ie"
+}

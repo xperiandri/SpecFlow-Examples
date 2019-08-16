@@ -1,4 +1,6 @@
 ﻿using FluentAssertions;
+using System;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace Bowling.SpecFlowXUnit.Drivers
@@ -6,6 +8,7 @@ namespace Bowling.SpecFlowXUnit.Drivers
     public class BowlingDriver
     {
         private Game _game;
+        private readonly Random random = new Random();
 
         public void NewGame()
         {
@@ -16,6 +19,7 @@ namespace Bowling.SpecFlowXUnit.Drivers
         {
             for (int i = 0; i < rollCont; i++)
             {
+                Thread.Sleep(random.Next(100, 1000));
                 _game.Roll(pins);
             }
         }
@@ -24,7 +28,9 @@ namespace Bowling.SpecFlowXUnit.Drivers
         {
             for (int i = 0; i < rollCount; i++)
             {
+                Thread.Sleep(random.Next(100, 1000));
                 _game.Roll(pins1);
+                Thread.Sleep(random.Next(100, 1000));
                 _game.Roll(pins2);
             }
         }
@@ -33,6 +39,7 @@ namespace Bowling.SpecFlowXUnit.Drivers
         {
             foreach (string roll in series.Trim().Split(','))
             {
+                Thread.Sleep(random.Next(100, 1000));
                 _game.Roll(int.Parse(roll));
             }
         }
@@ -41,6 +48,7 @@ namespace Bowling.SpecFlowXUnit.Drivers
         {
             foreach (var row in rolls.Rows)
             {
+                Thread.Sleep(random.Next(100, 1000));
                 _game.Roll(int.Parse(row["Pins"]));
             }
         }
